@@ -1,0 +1,25 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+<license lastchanged="2015-10-26 09:29:08">
+	<demodulator max-msymbols="120" />
+	<modulator max-msymbols="120" />
+	<encapsulator encryption="true" />
+</license>
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIcBAEBAgAGBQJWLeUgAAoJEIBONSmO9cgWH+8P/3Vyixni8y+vHJVh/bcHyJPY
+0xQEK8hnpOOa8ZMaoY5b5M5vwm7llRuRvM3ZIbBkyhIMb6mqPHQKNJXcc0PmfcqS
+dr98wlaZNqBcsj6sB1qwhJdCgxZfGwio09CaHigQbj1192T39W364EmPoM74JX2d
+jDxuhsuWQU4ZqPcLPfbEYNwr6GiJQh7Sc0onDi2QtvEuc+5UMzHpFL3jnV+I2JA2
+ptuIyfsAQlGaDq6F7h7xlsJT9E1AyF9Kvbvm+Jea7dMakmCdjBaBBfnbOTtGephR
+at4grc8oZpYRYJ6S4Vv8xCFjHqCYUiIw2ZMMSSJpckh2J0QPcX0IbJ5E97ukmjSd
+lqy8n+MCFFJm/9BPAWsig17hpmF11oiaKEj4fzGg9wKSRAvs9A9a1CjSIupkyU96
+fGxj+Oe/nWNShB5x/gB17gLJ2iwkIfYtGfoOWz6/MiPZRLuARvIvcDOrmLGLOMeX
+8AAHVbb5p6WhO9Ao7VgzZGyVnrK8uqRwuMrrDmHEwxmcsFuH4qxboNfStA7qh9dZ
+thPvYqk0SQYCtpAiSMFzsDQYrIQ6wD7zHXSZh68cPh7ykYZBpzRfxgCJ8CDBFn7v
+Ts8AnOniSKSFylmutLThubRsZHGvMleicTaSx5leL7QxiIaiBjwCjI8TK821HFPr
+Gzk3TSOeX2greliaR8ML
+=3wj7
+-----END PGP SIGNATURE-----

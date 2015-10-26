@@ -1,0 +1,5 @@
+<license lastchanged="2015-10-26 09:29:08">
+	<demodulator max-msymbols="120" />
+	<modulator max-msymbols="120" />
+	<encapsulator encryption="true" />
+</license>

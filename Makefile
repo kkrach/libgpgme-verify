@@ -6,8 +6,10 @@ TARGET=example
 
 SCRS=main.c
 OBJS=$(SCRS:.c=.o)
-CFLAGS=-Wall -Werror `gpgme-config --cflags` -D_FILE_OFFSET_BITS=64
-LDFLAGS=`gpgme-config --thread=pthread --libs`
+CFLAGS  = `gpgme-config --cflags`
+CFLAGS += -D_FILE_OFFSET_BITS=64
+CFLAGS += -Wall -Werror -g
+LDFLAGS =`gpgme-config --thread=pthread --libs`
 
 default: all
 all: $(TARGET)
