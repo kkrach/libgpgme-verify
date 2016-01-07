@@ -163,7 +163,6 @@ int main(int argc, const char* argv[]) {
 	FILE *fp_sig=NULL, *fp_msg=NULL;
 	gpgme_data_t sig=NULL, msg=NULL, plain=NULL, text=NULL;
 	gpgme_verify_result_t result;
-	int ret;
 
 	gpgme_protocol_t protocol = GPGME_PROTOCOL_OpenPGP;
 
@@ -194,12 +193,14 @@ int main(int argc, const char* argv[]) {
 	printf("started... %s %s\n", gpgme_version, gpgme_prot);
 
 	/* Analyze Engine */
-	ret = print_engine_info();
+#if 0
+	int ret = print_engine_info();
 	if (ret != 0) exit(1);
 	ret = print_protocol_info();
 	if (ret != 0) exit(1);
 	ret = print_hash_info();
 	if (ret != 0) exit(1);
+#endif
 
 	fp_sig = fopen(argv[1], "rb");
 	if (!fp_sig) {
@@ -262,13 +263,14 @@ int main(int argc, const char* argv[]) {
 
 
 	result = gpgme_op_verify_result(ctx);
+	int count = 0;
 	if (result) {
 		gpgme_signature_t sig;
-		int count = 0;
 
 		for(sig = result->signatures; sig; sig = sig->next)
 		{
 			count += 1;
+			printf("%d. Signature: summary=%x fingerprint=%s\n", count, sig->summary, sig->fpr);
 			if ( !(sig->summary & GPGME_SIGSUM_VALID) ) {
 				fprintf(stderr, "ERROR: verfication of signature %d failed: %s\n", count,
 				         gpgme_strerror(sig->status));
@@ -279,6 +281,11 @@ int main(int argc, const char* argv[]) {
 				exit(1);
 			}
 		}
+	}
+
+	if (count < 1) {
+		printf( "Error: Cannot find matching signature!\n" );
+		return 1;
 	}
 
 	printf( "\nSignature verfication successful. Plaintext:\n" );
